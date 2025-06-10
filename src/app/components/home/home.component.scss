@@ -1,0 +1,132 @@
+.navbar {
+  background-color: #3d040483;
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 40px;
+
+  .titulo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    margin: 0;
+    pointer-events: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    button {
+      background-color: #92000096;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #666;
+      }
+    }
+
+    .usuario-email {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+
+  .zona-izquierda {
+    flex: 1;
+    justify-content: flex-start;
+    display: flex;
+  }
+
+  .zona-centro {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 1;
+  }
+
+  .zona-derecha {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+  }
+}
+.juegos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; // importante: alinear arriba
+  min-height: 100vh;
+  padding: 60px 20px 20px; // más padding arriba para acercar al navbar
+  color: white;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  .botones-juegos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 50px;
+    width: 100%;
+    max-width: 800px;
+    justify-items: center;
+
+    button {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: none;
+      padding: 0;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      height: 180px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(6px);
+      overflow: hidden;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px 5px #14b7cc;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+        flex-grow: 1;
+      }
+
+      span {
+        position: absolute;
+        bottom: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 4px 10px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px black;
+      }
+
+      position: relative;
+    }
+  }
+}

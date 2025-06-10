@@ -1,0 +1,21 @@
+<div class="register-container">
+  <div class="register-box">
+    <h3>Registro</h3>
+    <input type="text" placeholder="Username" [(ngModel)]="username" class="register-input" />
+    <input type="password" placeholder="Password" [(ngModel)]="password" class="register-input" />
+    
+    <!-- Espacio reservado para error -->
+    <div class="error-message-space">
+      <span *ngIf="errorMessage" class="error-message">{{ errorMessage }}</span>
+    </div>
+    
+    <div>
+      <button (click)="register()" class="register-button">
+        Registro
+      </button>
+    </div>
+    <div class="login-link-container">
+      <a routerLink="../home" class="login-link">Home</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="navbar">
+  <h1 class="titulo">TETRIS</h1>
+  <nav class="zona-derecha">
+    <button (click)="Home()">Home</button>
+  </nav>
+</div>
+
+<div class="game">
+  <canvas #canvas width="300" height="600"></canvas>
+</div>
+
+<div class="controls">
+  <button class="control-btn" (click)="move(-1)">⬅️</button>
+  <button class="control-btn" (click)="rotate()">🔁</button>
+  <button class="control-btn" (click)="move(1)">➡️</button>
+  <button class="control-btn" (click)="drop()">⬇️</button>
+</div>
+
+<div *ngIf="showRetry" class="retry-container">
+  <p class="puntaje">Puntaje: {{ score }}</p>
+  <button (click)="retry()">Reintentar</button>
+</div>

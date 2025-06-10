@@ -1,0 +1,37 @@
+<div class="navbar">
+  <h1 class="titulo">AHORCADO</h1>
+  <nav class="zona-derecha" >
+    <button (click)="Home()">Home</button>
+  </nav>
+</div>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="ahorcado-container">
+    <div class="muñeco">
+      <div class="parte cabeza" *ngIf="intentos <= 5"></div>
+      <div class="parte cuerpo" *ngIf="intentos <= 4"></div>
+      <div class="parte brazo izquierdo" *ngIf="intentos <= 3"></div>
+      <div class="parte brazo derecho" *ngIf="intentos <= 2"></div>
+      <div class="parte pierna izquierda" *ngIf="intentos <= 1"></div>
+      <div class="parte pierna derecha" *ngIf="intentos <= 0"></div>
+    </div>
+
+    <div class="palabra">{{ palabraOculta }}</div>
+    <div class="letras">
+      <button *ngFor="let letra of 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')" 
+              [disabled]="letrasUsadas.includes(letra)" 
+              (click)="probarLetra(letra)">
+        {{ letra }}
+      </button>
+    </div>
+
+    <div class="info">
+      <p><strong>Intentos restantes:</strong> {{ intentos }}</p>
+      <p><strong>Puntaje:</strong> {{ puntaje }}</p>
+      <p class="final" *ngIf="juegoTerminado">{{ mensajeFinal }}</p>
+      <ion-button expand="block" color="primary" (click)="nuevaPalabra()" *ngIf="juegoTerminado">
+        Nueva palabra
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

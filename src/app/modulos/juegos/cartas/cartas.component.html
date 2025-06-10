@@ -1,0 +1,41 @@
+<div class="navbar">
+  <h1 class="titulo">Mayor Menor</h1>
+  <nav class="zona-derecha" >
+    <button (click)="Home()">Home</button>
+  </nav>
+</div>
+
+<ion-content class="ion-padding">
+  <div class="juego-container">
+    <div class="carta">
+      <p>Carta actual:</p>
+      <h1>{{ cartaActual.nombre }}{{ cartaActual.palo }}</h1>
+    </div>
+
+    <div class="botones" *ngIf="!juegoTerminado">
+      <ion-button expand="block" color="success" (click)="elegir('mayor')">Mayor</ion-button>
+      <ion-button expand="block" color="danger" (click)="elegir('menor')">Menor</ion-button>
+    </div>
+
+    <p class="mensaje">{{ mensaje }}</p>
+    <p class="puntaje">Puntaje: {{ puntaje }}</p>
+
+    <ion-button expand="block" fill="outline" (click)="iniciarJuego()" class="reiniciar-btn">
+      Reiniciar
+    </ion-button>
+  </div>
+
+  <div *ngIf="mejoresPuntajes.length > 0" class="mejores-puntajes">
+    <h3>Mejores Puntajes</h3>
+    <table>
+      <tr>
+        <th>Email</th>
+        <th>Puntaje</th>
+      </tr>
+      <tr *ngFor="let item of mejoresPuntajes">
+        <td>{{ item.email }}</td>
+        <td>{{ item.puntaje }}</td>
+      </tr>
+    </table>
+  </div>
+</ion-content>

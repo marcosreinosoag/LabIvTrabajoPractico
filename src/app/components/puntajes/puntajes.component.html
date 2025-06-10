@@ -1,0 +1,42 @@
+<div class="navbar">
+  <h1 class="titulo">PUNTAJES</h1>
+  <nav class="zona-derecha">
+    <button (click)="Home()">Home</button>
+  </nav>
+</div>
+
+<h2>Puntajes Globales</h2>
+<table class="tabla-retro">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Puntaje Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of puntajesGlobal">
+      <td>{{ item.email }}</td>
+      <td>{{ item.puntajeTotal }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Puntajes del Usuario</h2>
+<table class="tabla-retro">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Juego</th>
+      <th>Puntaje</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of puntajesIndividuales">
+      <td>{{ item.email }}</td>
+      <td>{{ item.juego }}</td>
+      <td>{{ item.puntaje }}</td>
+      <td>{{ item.fecha | date: 'shortDate' }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,71 @@
+<div class="navbar">
+  <h1 class="titulo">Home</h1>
+
+  <!-- Zona izquierda: siempre visible -->
+  <nav class="zona-izquierda">
+  <nav  *ngIf="!emailUsuario">
+    <button (click)="login()">Login</button>
+    <button (click)="Registrar()">Registrarse</button>
+  </nav>
+    <button (click)="Estadisticas()">Estadísticas</button>
+    <button (click)="InfoEncuestas()">Info Encuestas</button>
+    <button (click)="AcercaDeMi()">Acerca de mí</button>
+  </nav>
+
+  <!-- Zona centro: solo si NO hay usuario -->
+ 
+
+  <!-- Zona derecha: solo si hay usuario -->
+  <nav class="zona-derecha" *ngIf="emailUsuario">
+    <span class="usuario-email">{{ emailUsuario }}</span>
+    <button (click)="Chat()">Chat</button>
+    <button (click)="Encuesta()">Encuesta</button>
+    <button (click)="CerrarSesion()">Cerrar sesión</button>
+  </nav>
+</div>
+<div class="juegos-container">
+  <h1>Juegos</h1>
+  <div class="botones-juegos">
+    <button (click)="Tetris()">
+      <img src="/img/tetris.jpg" alt="Tetris" />
+      <span>Tetris</span>
+    </button>
+    <button (click)="Preguntados()">
+      <img src="/img/preguntados.jpg" alt="Preguntados" />
+      <span>Preguntados</span>
+    </button>
+    <button (click)="Ahorcado()">
+      <img src="/img/ahorcado.jpg" alt="Ahorcado" />
+      <span>Ahorcado</span>
+    </button>
+    <button (click)="Cartas()">
+      <img src="/img/cartas.jpg" alt="Cartas" />
+      <span>Mayor o Menor</span>
+    </button>
+  </div>
+</div>
+
+<!-- <h2>Usuarios</h2>
+
+<table class="table ">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>authId</th>
+            <th>Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (user of usersdata; track $index) {
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.authId }}</td>
+                <td>
+                    <img class="avatar" [src]="getAvatarUrl(user.avatarUrl)" alt="Foto de usuario">
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> -->

@@ -1,0 +1,52 @@
+<div class="navbar">
+  <h1 class="titulo">ENCUESTA</h1>
+  <nav class="zona-derecha" >
+    <button (click)="Home()">Home</button>
+  </nav>
+</div>  
+<form [formGroup]="form" (ngSubmit)="enviarEncuesta()" class="formulario">
+  <label>Nombre y Apellido:
+    <input formControlName="nombreApellido" />
+  </label>
+  <div class="error" *ngIf="form.controls['nombreApellido'].invalid && form.controls['nombreApellido'].touched">
+    Campo obligatorio.
+  </div>
+
+  <label>Edad:
+    <input type="number" formControlName="edad" />
+  </label>
+  <div class="error" *ngIf="form.controls['edad'].invalid && form.controls['edad'].touched">
+    Debe tener entre 18 y 99 años.
+  </div>
+
+  <label>Teléfono:
+    <input formControlName="telefono" maxlength="10" />
+  </label>
+  <div class="error" *ngIf="form.controls['telefono'].invalid && form.controls['telefono'].touched">
+    Solo números, máximo 10 caracteres.
+  </div>
+
+  <label>¿Con qué frecuencia usa nuestra app?</label>
+  <select formControlName="pregunta1">
+    <option value="" disabled>Seleccione</option>
+    <option>Diariamente</option>
+    <option>Semanalmente</option>
+    <option>Raramente</option>
+  </select>
+
+  <label>Que juegos te gustaron</label>
+  <div formGroupName="pregunta2">
+    <label><input type="checkbox" formControlName="op1" /> Tetris</label>
+    <label><input type="checkbox" formControlName="op2" /> Preguntados</label>
+    <label><input type="checkbox" formControlName="op3" /> Mayor o Menor</label>
+    <label><input type="checkbox" formControlName="op3" /> Ahorcado</label>
+  </div>
+
+  <label>¿Recomendaría la app?</label>
+  <div>
+    <label><input type="radio" formControlName="pregunta3" value="Sí" /> Sí</label>
+    <label><input type="radio" formControlName="pregunta3" value="No" /> No</label>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Enviar Encuesta</button>
+</form>

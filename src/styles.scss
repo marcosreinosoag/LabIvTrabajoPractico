@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+.toast-center {
+  top: 5% ;
+  left: 50% !important;
+  bottom: auto !important;
+  right: auto !important;
+  transform: translate(-50%, -50%) !important;
+  position: fixed !important;
+  z-index: 99999 !important;
+}
+body {
+   background-color: black;
+  background-image: url('assets/img/fondo.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,15 @@
+<div class="navbar">
+  <h1 class="titulo">CHAT</h1>
+  <nav class="zona-derecha" >
+    <button (click)="Home()">Home</button>
+  </nav>
+</div>
+
+<div class="chat">
+  <div *ngFor="let msg of mensajes">
+    <b>{{ msg.email }}:</b> {{ msg.mensaje }} <i>{{ msg.created_at | date:'shortTime' }}</i>
+  </div>
+
+  <input [(ngModel)]="nuevoMensaje" placeholder="Escribe tu mensaje..." />
+  <button (click)="enviarMensaje(nuevoMensaje); nuevoMensaje = ''">Enviar</button>
+</div>

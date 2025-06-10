@@ -1,0 +1,28 @@
+<h2>Respuestas de Encuestas</h2>
+<table *ngIf="encuestas.length > 0">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Nombre y Apellido</th>
+      <th>Edad</th>
+      <th>Teléfono</th>
+      <th>Frecuencia de uso</th>
+      <th>Juegos gustados</th>
+      <th>Recomendación</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of encuestas">
+      <td>{{ item.email }}</td>
+      <td>{{ item.nombreapellido }}</td>
+      <td>{{ item.edad }}</td>
+      <td>{{ item.telefono }}</td>
+      <td>{{ item.pregunta1 }}</td>
+      <td>{{ transformarJuegos(item.pregunta2) }}</td>
+      <td>{{ item.pregunta3 }}</td>
+      <td>{{ item.created_at }}</td>
+    </tr>
+  </tbody>
+</table>
+<p *ngIf="encuestas.length === 0">No hay encuestas para mostrar.</p>

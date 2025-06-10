@@ -1,0 +1,20 @@
+<div class="preguntados-container" *ngIf="personajeActual">
+  <h2>¿Quién es este personaje?</h2>
+  <img [src]="personajeActual.image" [alt]="personajeActual.character" class="personaje-img">
+
+  <div class="opciones">
+    <button *ngFor="let op of opciones"
+            [disabled]="juegoTerminado"
+            (click)="elegir(op)">
+      {{ op }}
+    </button>
+  </div>
+  
+  <div class="respuesta">{{ respuesta }}</div>
+  <div class="puntaje">Puntaje: {{ puntaje }}</div>
+
+  <button (click)="juegoTerminado ? reiniciar() : nuevaPregunta()"
+          class="btn-siguiente">
+    {{ juegoTerminado ? 'Reiniciar' : 'Siguiente' }}
+  </button>
+</div>

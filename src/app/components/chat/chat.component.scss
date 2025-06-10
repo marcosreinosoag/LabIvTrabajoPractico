@@ -1,0 +1,101 @@
+.chat {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.chat div {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat b {
+  color: #00ffff;
+}
+
+.chat i {
+  float: right;
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+input {
+  width: 75%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00baba;
+}
+.chat {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.navbar {
+  background-color: #3d040483;
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 40px;
+
+  .titulo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    margin: 0;
+    pointer-events: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    button {
+      background-color: #92000096;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #666;
+      }
+    }
+  }
+
+  .zona-derecha {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+  }
+}

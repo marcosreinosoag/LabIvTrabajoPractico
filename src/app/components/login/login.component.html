@@ -1,0 +1,18 @@
+<div class="login-container">
+  <div class="login-box">
+    <h1>Login</h1>
+    <input type="text" placeholder="Usuario" [(ngModel)]="username" class="login-input" />
+    <input type="password" placeholder="Clave" [(ngModel)]="password" class="login-input" />
+    <div class="error-message-space">
+      <span *ngIf="errorMessage" class="error-message">{{ errorMessage }}</span>
+    </div>
+    <button (click)="login()" class="login-button">LOGIN</button>
+    <div class="login-button-container">
+      <button (click)="UsuarioUno()" class="user-button">Usuario Uno</button>
+      <button (click)="UsuarioDos()" class="user-button">Usuario Dos</button>
+    </div>
+    <div class="register-link-container">
+      <a routerLink="../home" class="register-link">Home</a>
+    </div>
+  </div>
+</div>

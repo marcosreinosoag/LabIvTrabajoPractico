@@ -1,0 +1,70 @@
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh; /* altura total de la pantalla */
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+}
+
+.contenedor {
+    text-align: center;
+}
+h1, h2 {
+    color: #fff;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: white;
+}
+.navbar {
+  background-color: #130202d5;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      background-color: #92000096;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #666;
+      }
+    }
+  }
+}
+
+.foto-perfil {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.foto-juego {
+  width: 180px;
+  height: 110px;
+  border: 2px solid #302a2ace;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}

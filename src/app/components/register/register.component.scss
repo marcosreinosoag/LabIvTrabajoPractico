@@ -1,0 +1,72 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: transparent;
+}
+
+.register-box {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+  border: 2.5px solid #50cee444;
+  padding: 36px 32px 32px 32px;
+  max-width: 370px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-input {
+  width: 300px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.register-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error-message-space {
+  min-height: 24px; /* Reserva espacio para el error, ajusta el alto si tu fuente es mayor */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.error-message {
+  color: #ff4d4d;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
+.register-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.register-button:hover {
+  background-color: #218838;
+}
+
+.login-link-container {
+  margin-top: 20px;
+}
+.login-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}

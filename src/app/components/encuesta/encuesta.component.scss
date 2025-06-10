@@ -1,0 +1,91 @@
+.navbar {
+  background-color: #3d040483;
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 40px;
+
+  .titulo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    margin: 0;
+    pointer-events: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    button {
+      background-color: #92000096;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #666;
+      }
+    }
+  }
+
+  .zona-derecha {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+  }
+}
+.formulario {
+  max-width: 500px;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #5e5656;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 0.85em;
+}

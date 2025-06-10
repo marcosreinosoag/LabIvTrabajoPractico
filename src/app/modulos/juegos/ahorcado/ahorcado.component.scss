@@ -1,0 +1,147 @@
+.ahorcado-container {
+  text-align: center;
+
+  .muñeco {
+    margin: 20px auto;
+    position: relative;
+    width: 100px;
+    height: 180px;
+  }
+
+  .parte {
+    position: absolute;
+    background-color: white;
+  }
+
+  .cabeza {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 0;
+    left: 35px;
+    background-color: #fff;
+    animation: aparecer 0.5s;
+  }
+
+  .cuerpo {
+    width: 6px;
+    height: 50px;
+    top: 30px;
+    left: 47px;
+    background-color: #fff;
+    animation: aparecer 0.5s;
+  }
+
+  .brazo {
+    width: 30px;
+    height: 6px;
+    top: 40px;
+    background-color: #fff;
+    animation: aparecer 0.5s;
+  }
+
+  .brazo.izquierdo {
+    left: 17px;
+    transform: rotate(-45deg);
+  }
+
+  .brazo.derecho {
+    left: 53px;
+    transform: rotate(45deg);
+  }
+
+  .pierna {
+    width: 30px;
+    height: 6px;
+    top: 80px;
+    background-color: #fff;
+    animation: aparecer 0.5s;
+  }
+
+  .pierna.izquierda {
+    left: 17px;
+    transform: rotate(-45deg);
+  }
+
+  .pierna.derecha {
+    left: 53px;
+    transform: rotate(45deg);
+  }
+
+  .palabra {
+    font-size: 2rem;
+    margin: 1rem 0;
+    letter-spacing: 8px;
+  }
+
+  .letras button {
+    margin: 3px;
+    width: 32px;
+    height: 32px;
+    font-weight: bold;
+  }
+
+  .info {
+    margin-top: 1rem;
+    .final {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff4081;
+    }
+  }
+}
+.navbar {
+  background-color: #3d040483;
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 40px;
+
+  .titulo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    margin: 0;
+    pointer-events: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    button {
+      background-color: #92000096;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #666;
+      }
+    }
+  }
+
+  .zona-derecha {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
